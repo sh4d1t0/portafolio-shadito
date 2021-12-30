@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 // Step 2: Define your component
 const AboutPage = () => {
   return (
-    <Layout pageTitle="About Me">
+    <Layout pageTitle="Acerca de">
       <p className="subpixel-antialiased">Informacion personal va a ir aqui</p>
     </Layout>
   );

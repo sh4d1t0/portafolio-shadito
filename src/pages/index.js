@@ -3,7 +3,7 @@ import Layout from "../components/layout";
 
 const IndexPage = () => {
   return (
-    <Layout pageTitle="Home Page">
+    <Layout pageTitle="Home">
       <p className="subpixel-antialiased">En construccion</p>
     </Layout>
   );
