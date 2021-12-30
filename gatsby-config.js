@@ -1,7 +1,6 @@
 module.exports = {
-  pathPrefix: "sh4d1t0.github.io",
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
+    siteUrl: "https://sh4d1t0.github.io",
     title: "Portafolio Shadito",
   },
   plugins: ["gatsby-plugin-postcss"],
