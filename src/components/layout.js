@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Link, useStaticQuery, graphql } from "gatsby";
+import * as React from 'react'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 const Layout = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
@@ -10,7 +10,7 @@ const Layout = ({ pageTitle, children }) => {
         }
       }
     }
-  `);
+  `)
   return (
     <div className="container mx-auto">
       <title>
@@ -18,8 +18,8 @@ const Layout = ({ pageTitle, children }) => {
       </title>
       <nav className="flex justify-center pb-8 space-x-4">
         {[
-          ["Home", "/"],
-          ["About", "/about"],
+          ['Home', '/'],
+          ['About', '/about'],
         ].map(([title, url]) => (
           <Link
             key={title}
@@ -37,7 +37,7 @@ const Layout = ({ pageTitle, children }) => {
         {children}
       </main>
     </div>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

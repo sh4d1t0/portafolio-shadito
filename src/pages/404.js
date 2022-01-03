@@ -1,55 +1,38 @@
-import * as React from "react";
-import { Link } from "gatsby";
-
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-};
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-};
-
-const paragraphStyles = {
-  marginBottom: 48,
-};
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-};
+import * as React from 'react'
+import { Link } from 'gatsby'
+import Layout from '../components/layout'
 
 // markup
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <title>Pagina no encontrada</title>
-      <h1 style={headingStyles}>Pagina no encontrada</h1>
-      <p style={paragraphStyles}>
-        Lo sentimos{" "}
+    <Layout pageTitle="404">
+      <h1 className="underline decoration-pink-500">Pagina no encontrada</h1>
+      <p className="subpixel-antialiased">
+        Lo sentimos{' '}
         <span role="img" aria-label="Pensive emoji">
           😔
-        </span>{" "}
-        no podimos encontrar lo que buscabas.
+        </span>{' '}
+        no pudimos encontrar lo que buscabas.
         <br />
-        {process.env.NODE_ENV === "development" ? (
+        {process.env.NODE_ENV === 'development' ? (
           <>
             <br />
-            Intentando crear pagina enn{" "}
-            <code style={codeStyles}>src/pages/</code>.
+            Intentando crear pagina en{' '}
+            <code className="codeStyles">src/pages/</code>.
             <br />
           </>
         ) : null}
         <br />
-        <Link to="/">Regresar al Home</Link>.
+        <Link
+          to="/"
+          className="font-medium px-3 py-2 text-gray-700 underline decoration-indigo-500 hover:decoration-pink-500 hover:text-gray-900"
+        >
+          Regresar al Home
+        </Link>
+        .
       </p>
-    </main>
-  );
-};
+    </Layout>
+  )
+}
 
-export default NotFoundPage;
+export default NotFoundPage
