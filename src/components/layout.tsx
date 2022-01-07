@@ -4,12 +4,12 @@ import { graphql, Link, useStaticQuery } from 'gatsby'
 const Layout: FC<{ pageTitle?: string }> = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
     query SiteMetadata {
-    site {
-      siteMetadata {
-        title
+      site {
+        siteMetadata {
+          title
+        }
       }
     }
-  }
   `)
 
   return (
@@ -17,22 +17,18 @@ const Layout: FC<{ pageTitle?: string }> = ({ pageTitle, children }) => {
       <title>
         {pageTitle} | {data.site.siteMetadata.title}
       </title>
-      <nav className="flex justify-center pb-8 space-x-4">
+      <nav>
         {[
           ['Home', '/'],
           ['About', '/about'],
         ].map(([title, url]) => (
-          <Link
-            key={title}
-            to={url}
-            className="font-medium px-3 py-2 text-gray-700 rounded-lg hover:bg-gray-100 hover:text-gray-900"
-          >
+          <Link key={title} to={url}>
             {title}
           </Link>
         ))}
       </nav>
       <main>
-        <h1 className="flex justify-center pb-8 text-3xl font-bold underline">
+        <h1 className="flex justify-center pb-8 text-3xl font-bold">
           {pageTitle}
         </h1>
         {children}

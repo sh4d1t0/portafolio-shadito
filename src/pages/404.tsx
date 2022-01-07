@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 export default function NotFoundPage() {
   return (
     <Layout pageTitle="404">
-      <h1 className="underline decoration-pink-500">Pagina no encontrada</h1>
+      <h1 className="decoration-pink-500">Pagina no encontrada</h1>
       <p className="subpixel-antialiased">
         Lo sentimos{' '}
         <span role="img" aria-label="Pensive emoji">
@@ -17,7 +17,7 @@ export default function NotFoundPage() {
           <>
             <br />
             Intentando crear pagina en{' '}
-            <code className="codeStyles">src/pages/</code>.
+            <code className="codeStyles">src/pages/</code>
             <br />
           </>
         ) : null}
