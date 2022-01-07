@@ -1,9 +1,8 @@
-import * as React from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 
-// markup
-const NotFoundPage = () => {
+export default function NotFoundPage() {
   return (
     <Layout pageTitle="404">
       <h1 className="underline decoration-pink-500">Pagina no encontrada</h1>
@@ -34,5 +33,3 @@ const NotFoundPage = () => {
     </Layout>
   )
 }
-
-export default NotFoundPage

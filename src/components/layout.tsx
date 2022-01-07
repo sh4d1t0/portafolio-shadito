@@ -1,16 +1,17 @@
-import * as React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import React, { FC } from 'react'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 
-const Layout = ({ pageTitle, children }) => {
+const Layout: FC<{ pageTitle?: string }> = ({ pageTitle, children }) => {
   const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          title
-        }
+    query SiteMetadata {
+    site {
+      siteMetadata {
+        title
       }
     }
+  }
   `)
+
   return (
     <div className="container mx-auto">
       <title>

@@ -1,7 +1,7 @@
-import * as React from 'react'
+import React from 'react'
 import Layout from '../components/layout'
 
-const IndexPage = () => {
+export default function IndexPage() {
   return (
     <Layout pageTitle="Home">
       <div className="max-w-md mx-auto overflow-hidden md:max-w-full">
@@ -47,5 +47,3 @@ const IndexPage = () => {
     </Layout>
   )
 }
-
-export default IndexPage
