@@ -1,6 +1,11 @@
-import React, { FC } from 'react'
+import React from 'react'
+import { Button } from '../Button'
 
-const PresentationCard: FC<{}> = () => {
+interface PresentationCardProps {
+  onModal: () => void
+}
+
+const PresentationCard = ({ onModal }: PresentationCardProps) => {
   return (
     <div className="card">
       <div className="md:flex">
@@ -19,8 +24,13 @@ const PresentationCard: FC<{}> = () => {
           </p>
           <div className="card-footer">
             <div>
-              <button className="button-primary">Contratar</button>
-              <button className="button-primary">Obtener CV</button>
+              <Button
+                primary
+                size="medium"
+                onClick={onModal}
+                label="Contratar"
+              />
+              <Button size="medium" onClick={onModal} label="Obtener CV" />
             </div>
           </div>
         </div>
