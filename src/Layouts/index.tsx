@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { graphql, Link, PageProps, StaticQuery, useStaticQuery } from 'gatsby'
-import Title from '../Title'
+import { Link } from 'gatsby'
+import Title from '../components/Title'
 
 interface LayoutProps {
   pageTitle: string

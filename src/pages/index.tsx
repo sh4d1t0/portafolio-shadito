@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { PageProps } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../Layouts'
 import PresentationCard from '../components/PresentationCard'
 
 export default function IndexPage({ children }: PageProps) {

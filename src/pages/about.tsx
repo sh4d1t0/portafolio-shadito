@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageProps } from 'gatsby'
-import Layout from '../components/layout'
+import Layout from '../Layouts'
 
 export default function AboutPage({ children }: PageProps) {
   const pageTitle = 'Acerca de'

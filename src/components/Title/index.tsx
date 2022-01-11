@@ -1,9 +1,10 @@
-import { graphql, StaticQuery, useStaticQuery } from 'gatsby'
+import { graphql, PageProps, StaticQuery, useStaticQuery } from 'gatsby'
 import React, { FC } from 'react'
 
 interface LayoutProps {
   pageTitle: string
-  data: {
+  siteTitle?: string
+  data?: {
     site: {
       siteMetadata?: {
         title: string
@@ -20,23 +21,12 @@ interface LayoutQuery {
   }
 }
 
-const PureTitle: FC<LayoutProps> = ({ data, pageTitle }) => {
-  /*const data = useStaticQuery<LayoutQuery>(
-    graphql`
-      query SiteMetadata {
-        site {
-          siteMetadata {
-            title
-          }
-        }
-      }
-    `
-  )*/
-  let siteTitle = ''
-  if (data.site.siteMetadata) {
-    siteTitle = data.site.siteMetadata.title
+const PureTitle: FC<LayoutProps> = ({ data, pageTitle, siteTitle }) => {
+  /* istanbul ignore next */
+  if (!data?.site.siteMetadata) {
+    throw new Error('El sitio no tiene los Metadatos completos')
   }
-  pageTitle = pageTitle
+  siteTitle = data.site.siteMetadata.title
 
   return (
     <title>
@@ -45,9 +35,9 @@ const PureTitle: FC<LayoutProps> = ({ data, pageTitle }) => {
   )
 }
 
-export default function Title(props) {
+export default function Title({ pageTitle }: LayoutProps) {
   return (
-    <StaticQuery
+    <StaticQuery<LayoutQuery>
       query={graphql`
         query {
           site {
@@ -57,7 +47,7 @@ export default function Title(props) {
           }
         }
       `}
-      render={data => <PureTitle {...props} data={data} />}
+      render={data => <PureTitle data={data} pageTitle={pageTitle} />}
     />
   )
 }
