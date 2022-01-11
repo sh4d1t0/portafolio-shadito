@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from '@testing-library/react'
-import { StaticQuery } from "gatsby"
+import { StaticQuery } from 'gatsby'
 
 import { PureLayout as Layout } from '.'
 
@@ -9,7 +9,7 @@ beforeEach(() => {
     render({
       site: {
         siteMetadata: {
-          title: "Portafolio Shadito",
+          title: 'Portafolio Shadito',
         },
       },
     })
@@ -18,13 +18,13 @@ beforeEach(() => {
 
 describe(`Layout`, () => {
   it(`Layout renders correctly`, () => {
-    const pageTitle = "404"
+    const pageTitle = '404'
     const data = {
-        site: {
-          siteMetadata: {
-            title: "Portafolio Shadito"
-          }
-        }
+      site: {
+        siteMetadata: {
+          title: 'Portafolio Shadito',
+        },
+      },
     }
     const LayoutRender = render(<Layout data={data} pageTitle={pageTitle} />)
     expect(LayoutRender).toMatchSnapshot()

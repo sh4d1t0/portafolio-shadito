@@ -17,7 +17,8 @@
     "clean": "gatsby clean",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --watchAll=false --coverage"
   },
   "dependencies": {
     "@headlessui/react": "^1.4.2",
