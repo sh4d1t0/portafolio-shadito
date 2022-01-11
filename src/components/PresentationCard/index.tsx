@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { FC } from 'react'
 import { Button } from '../Button'
 
 interface PresentationCardProps {
-  onModal: () => void
+  onModal?: () => void
 }
 
-const PresentationCard = ({ onModal }: PresentationCardProps) => {
+const PresentationCard: FC<PresentationCardProps> = ({ onModal }) => {
   return (
     <div className="card">
       <div className="md:flex">

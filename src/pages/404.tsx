@@ -1,11 +1,39 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import Layout from '../components/layout'
+import { graphql, Link, PageProps, useStaticQuery } from 'gatsby'
+import { PureLayout as Layout } from '../components/layout'
 
-export default function NotFoundPage() {
+interface NotFoundProps {
+  pageTitle: string
+}
+
+type LayoutQuery = {
+  site: {
+    siteMetadata: {
+      title: string
+    }
+  }
+}
+
+export default function NotFoundPage(
+  { pageTitle }: NotFoundProps,
+  { children }: PageProps
+) {
+  const data = useStaticQuery<LayoutQuery>(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  pageTitle = '404'
+
   return (
-    <Layout pageTitle="404">
-      <h1 className="decoration-pink-500">Pagina no encontrada</h1>
+    <Layout data={data} pageTitle={pageTitle} {...children}>
+      <h1 data-testid="not-found" className="decoration-pink-500">
+        Pagina no encontrada
+      </h1>
       <p className="subpixel-antialiased">
         Lo sentimos{' '}
         <span role="img" aria-label="Pensive emoji">

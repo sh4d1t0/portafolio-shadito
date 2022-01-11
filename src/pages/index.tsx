@@ -1,15 +1,40 @@
+import { graphql, PageProps, useStaticQuery } from 'gatsby'
 import React from 'react'
-import Layout from '../components/layout'
+import { PureLayout as Layout } from '../components/layout'
 import PresentationCard from '../components/PresentationCard'
 
 interface IndexProps {
   onModal: () => void
+  pageTitle: string
 }
 
-export default function IndexPage({ onModal }: IndexProps) {
+type LayoutQuery = {
+  site: {
+    siteMetadata: {
+      title: string
+    }
+  }
+}
+
+export default function IndexPage(
+  { onModal, pageTitle }: IndexProps,
+  { children }: PageProps
+) {
+  const data = useStaticQuery<LayoutQuery>(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  pageTitle = 'Home'
   return (
-    <Layout pageTitle="Home">
-      <PresentationCard onModal={onModal} />
-    </Layout>
+    <>
+      <Layout data={data} pageTitle={pageTitle} {...children}>
+        <PresentationCard onModal={onModal} />
+      </Layout>
+    </>
   )
 }

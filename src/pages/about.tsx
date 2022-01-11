@@ -1,9 +1,36 @@
+import { graphql, PageProps, useStaticQuery } from 'gatsby'
 import React from 'react'
-import Layout from '../components/layout'
+import { PureLayout as Layout } from '../components/layout'
 
-export default function AboutPage() {
+interface AboutPageProps {
+  pageTitle: string
+}
+
+type LayoutQuery = {
+  site: {
+    siteMetadata: {
+      title: string
+    }
+  }
+}
+
+export default function AboutPage(
+  { pageTitle }: AboutPageProps,
+  { children }: PageProps
+) {
+  const data = useStaticQuery<LayoutQuery>(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+  pageTitle = 'Acerca de'
+
   return (
-    <Layout pageTitle="Acerca de">
+    <Layout data={data} pageTitle={pageTitle} {...children}>
       <p className="subpixel-antialiased">Información personal va a ir aquí</p>
     </Layout>
   )
