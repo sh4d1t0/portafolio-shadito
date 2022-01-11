@@ -1,8 +1,15 @@
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, StaticQuery, useStaticQuery } from 'gatsby'
 import React, { FC } from 'react'
 
 interface LayoutProps {
   pageTitle: string
+  data: {
+    site: {
+      siteMetadata?: {
+        title: string
+      }
+    }
+  }
 }
 
 interface LayoutQuery {
@@ -13,8 +20,8 @@ interface LayoutQuery {
   }
 }
 
-const Title: FC<LayoutProps> = ({ pageTitle }) => {
-  const data = useStaticQuery<LayoutQuery>(
+const PureTitle: FC<LayoutProps> = ({ data, pageTitle }) => {
+  /*const data = useStaticQuery<LayoutQuery>(
     graphql`
       query SiteMetadata {
         site {
@@ -24,12 +31,12 @@ const Title: FC<LayoutProps> = ({ pageTitle }) => {
         }
       }
     `
-  )
-  if (!data.site.siteMetadata) {
-    throw new Error('El sitio no tiene un Titulo y es importante para el SEO')
+  )*/
+  let siteTitle = ''
+  if (data.site.siteMetadata) {
+    siteTitle = data.site.siteMetadata.title
   }
-  pageTitle = pageTitle || ''
-  const siteTitle = data.site.siteMetadata.title
+  pageTitle = pageTitle
 
   return (
     <title>
@@ -38,4 +45,19 @@ const Title: FC<LayoutProps> = ({ pageTitle }) => {
   )
 }
 
-export default Title
+export default function Title(props) {
+  return (
+    <StaticQuery
+      query={graphql`
+        query {
+          site {
+            siteMetadata {
+              title
+            }
+          }
+        }
+      `}
+      render={data => <PureTitle {...props} data={data} />}
+    />
+  )
+}
