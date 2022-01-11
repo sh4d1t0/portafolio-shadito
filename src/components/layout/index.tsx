@@ -1,30 +1,15 @@
 import React, { FC } from 'react'
 import { graphql, Link, PageProps, StaticQuery, useStaticQuery } from 'gatsby'
+import Title from '../Title'
 
 interface LayoutProps {
-  pageTitle?: string
-  siteTitle?: string
-  data: {
-    site: {
-      siteMetadata: {
-        title: string
-      }
-    }
-  }
+  pageTitle: string
 }
 
-export const PureLayout: FC<LayoutProps> = ({
-  data,
-  pageTitle,
-  siteTitle,
-  children,
-}) => {
-  siteTitle = data.site.siteMetadata.title
+export const Layout: FC<LayoutProps> = ({ pageTitle, children }) => {
   return (
     <div className="container mx-auto">
-      <title>
-        {pageTitle} | {siteTitle}
-      </title>
+      <Title pageTitle={pageTitle} />
       <nav>
         {[
           ['Home', '/'],
@@ -42,23 +27,6 @@ export const PureLayout: FC<LayoutProps> = ({
         {children}
       </main>
     </div>
-  )
-}
-
-export const Layout = ({ props }) => {
-  return (
-    <StaticQuery
-      query={graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `}
-      render={data => <PureLayout {...props} data={data} />}
-    />
   )
 }
 

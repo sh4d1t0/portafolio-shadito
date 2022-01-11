@@ -1,11 +1,7 @@
 import React, { FC } from 'react'
 import { Button } from '../Button'
 
-interface PresentationCardProps {
-  onModal?: () => void
-}
-
-const PresentationCard: FC<PresentationCardProps> = ({ onModal }) => {
+const PresentationCard: FC = () => {
   return (
     <div className="card">
       <div className="md:flex">
@@ -24,13 +20,8 @@ const PresentationCard: FC<PresentationCardProps> = ({ onModal }) => {
           </p>
           <div className="card-footer">
             <div>
-              <Button
-                primary
-                size="medium"
-                onClick={onModal}
-                label="Contratar"
-              />
-              <Button size="medium" onClick={onModal} label="Obtener CV" />
+              <Button primary size="medium" label="Contratar" />
+              <Button size="medium" label="Obtener CV" />
             </div>
           </div>
         </div>
