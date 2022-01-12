@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react'
 import Title from '.'
 
 export default {
-  title: 'Basics/Title',
+  title: 'Atoms/Title',
   component: Title,
 } as ComponentMeta<typeof Title>
 

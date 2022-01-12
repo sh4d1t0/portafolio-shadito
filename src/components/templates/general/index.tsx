@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Link } from 'gatsby'
-import Title from '../components/Title'
+import Title from '../../atoms/Title'
 
 interface LayoutProps {
   pageTitle: string
