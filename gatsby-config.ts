@@ -20,6 +20,7 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
+    'gatsby-plugin-styled-components',
     'gatsby-transformer-remark',
   ],
 }

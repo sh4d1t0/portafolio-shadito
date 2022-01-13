@@ -20,8 +20,8 @@ const PresentationCard: FC = () => {
           </p>
           <div className="card-footer">
             <div>
-              <Button primary size="medium" label="Contratar" />
-              <Button size="medium" label="Obtener CV" />
+              <Button variant="primary" label="Contratar" />
+              <Button variant="secondary" label="Obtener CV" />
             </div>
           </div>
         </div>

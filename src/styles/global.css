@@ -56,23 +56,4 @@
   .card-footer div {
     @apply col-start-1 space-x-6 text-center;
   }
-
-  .btn {
-    @apply rounded-full focus:outline-none focus:ring text-white;
-  }
-  .btn-primary {
-    @apply bg-sky-500 hover:bg-sky-400 active:bg-sky-600 focus:ring-sky-300;
-  }
-  .btn-secondary {
-    @apply bg-gray-500 hover:bg-gray-400 active:bg-gray-600 focus:ring-gray-300;
-  }
-  .btn-small {
-    @apply text-xs px-2 py-1;
-  }
-  .btn-medium {
-    @apply text-sm px-3 py-2;
-  }
-  .btn-large {
-    @apply text-lg px-4 py-3;
-  }
 }
