@@ -18,7 +18,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
-    "test:coverage": "jest --watchAll=false --coverage"
+    "test:coverage": "jest --watchAll --coverage",
+    "test:generate-output": "jest --json --outputFile=.jest-test-results.json"
   },
   "babelMacros": {
     "twin": {
@@ -28,6 +29,7 @@
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
+    "@storybook/addon-jest": "^6.4.12",
     "@storybook/addon-postcss": "^2.0.0",
     "babel-plugin-styled-components": "^2.0.2",
     "gatsby": "^4.4.0",

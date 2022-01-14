@@ -1,4 +1,4 @@
-import { graphql, PageProps, StaticQuery, useStaticQuery } from 'gatsby'
+import { graphql, StaticQuery } from 'gatsby'
 import React, { FC } from 'react'
 
 interface LayoutProps {

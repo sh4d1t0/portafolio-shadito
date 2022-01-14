@@ -15,6 +15,7 @@ module.exports = {
       },
     },
     'storybook-addon-gatsby',
+    '@storybook/addon-jest',
     'tailwind-tales-addon',
   ],
   framework: '@storybook/react',
