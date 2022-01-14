@@ -7,6 +7,7 @@ export default {
   component: Button,
   argTypes: {
     backgroundColor: { control: 'color' },
+    color: { control: 'color' },
   },
 } as ComponentMeta<typeof Button>
 

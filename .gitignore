@@ -70,3 +70,4 @@ yarn-error.log
 
 # Jest
 .jest-test-results.json
+src/components/**/*.snap

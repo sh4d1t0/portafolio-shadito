@@ -29,8 +29,6 @@
   "dependencies": {
     "@headlessui/react": "^1.4.2",
     "@heroicons/react": "^1.0.5",
-    "@storybook/addon-jest": "^6.4.12",
-    "@storybook/addon-postcss": "^2.0.0",
     "babel-plugin-styled-components": "^2.0.2",
     "gatsby": "^4.4.0",
     "gatsby-plugin-styled-components": "^5.5.0",
@@ -48,9 +46,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.16.7",
+    "@storybook/addon-a11y": "^6.4.12",
     "@storybook/addon-actions": "^6.4.12",
     "@storybook/addon-essentials": "^6.4.12",
+    "@storybook/addon-jest": "^6.4.12",
     "@storybook/addon-links": "^6.4.12",
+    "@storybook/addon-postcss": "^2.0.0",
     "@storybook/builder-webpack5": "^6.4.12",
     "@storybook/manager-webpack5": "^6.4.12",
     "@storybook/react": "^6.4.12",
