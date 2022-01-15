@@ -44,6 +44,7 @@ export default {
   //   "lcov",
   //   "clover"
   // ],
+  reporters: ['default', 'jest-screenshot/reporter'],
 
   // An object that configures minimum threshold enforcement for coverage results
   // coverageThreshold: undefined,
@@ -93,7 +94,7 @@ export default {
   },
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
-  // modulePathIgnorePatterns: [],
+  modulePathIgnorePatterns: ['node_modules', 'jest-test-results.json'],
 
   // Activates notifications for test results
   // notify: false,
@@ -102,7 +103,7 @@ export default {
   // notifyMode: "failure-change",
 
   // A preset that is used as a base for Jest's configuration
-  // preset: undefined,
+  preset: 'jest-puppeteer',
 
   // Run tests from one or more projects
   // projects: undefined,
@@ -137,7 +138,7 @@ export default {
   setupFiles: [`<rootDir>/loadershim.js`],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  setupFilesAfterEnv: ['<rootDir>/setup-test-env.js'],
+  setupFilesAfterEnv: ['<rootDir>/setup-test-env.ts'],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,

@@ -2,6 +2,20 @@ import React from 'react'
 import * as stories from './Button.stories'
 import { composeStories } from '@storybook/testing-react'
 import { render, screen } from '@testing-library/react'
+const screenshotTest = require('../../../utils/screenshotTest')
+
+const setup = {
+  'atoms-button': [
+    'primary',
+    'secondary',
+    'small',
+    'large',
+    'custom-background-color',
+    'custom-text-color',
+  ],
+}
+
+screenshotTest(setup)
 
 const {
   Primary,

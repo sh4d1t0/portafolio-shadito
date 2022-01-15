@@ -19,7 +19,7 @@ Primary.args = {
   variant: 'primary',
 }
 Primary.parameters = {
-  jest: ['button.test.jsx'],
+  jest: ['button.test.tsx'],
 }
 
 export const Secondary = Template.bind({})
@@ -28,7 +28,7 @@ Secondary.args = {
   variant: 'secondary',
 }
 Secondary.parameters = {
-  jest: ['button.test.jsx'],
+  jest: ['button.test.tsx'],
 }
 
 export const Small = Template.bind({})
@@ -38,7 +38,7 @@ Small.args = {
   variant: 'primary',
 }
 Small.parameters = {
-  jest: ['button.test.jsx'],
+  jest: ['button.test.tsx'],
 }
 
 export const Large = Template.bind({})
@@ -48,7 +48,7 @@ Large.args = {
   variant: 'primary',
 }
 Large.parameters = {
-  jest: ['button.test.jsx'],
+  jest: ['button.test.tsx'],
 }
 
 export const CustomBackgroundColor = Template.bind({})
@@ -58,7 +58,7 @@ CustomBackgroundColor.args = {
   variant: 'primary',
 }
 CustomBackgroundColor.parameters = {
-  jest: ['button.test.jsx'],
+  jest: ['button.test.tsx'],
 }
 
 export const CustomTextColor = Template.bind({})
@@ -68,5 +68,5 @@ CustomTextColor.args = {
   variant: 'primary',
 }
 CustomTextColor.parameters = {
-  jest: ['button.test.jsx'],
+  jest: ['button.test.tsx'],
 }
