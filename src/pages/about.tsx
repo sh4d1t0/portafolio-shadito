@@ -1,12 +1,11 @@
 import React from 'react'
-import { PageProps } from 'gatsby'
 import Layout from '../components/templates/general'
 
-export default function AboutPage({ children }: PageProps) {
+export default function AboutPage() {
   const pageTitle = 'Acerca de'
 
   return (
-    <Layout pageTitle={pageTitle} {...children}>
+    <Layout pageTitle={pageTitle}>
       <p className="subpixel-antialiased">Información personal va a ir aquí</p>
     </Layout>
   )

@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link, PageProps } from 'gatsby'
+import { Link } from 'gatsby'
 import Layout from '../components/templates/general'
 
-export default function NotFoundPage({ children }: PageProps) {
+export default function NotFoundPage() {
   const pageTitle = '404'
 
   return (
-    <Layout pageTitle={pageTitle} {...children}>
+    <Layout pageTitle={pageTitle}>
       <h1 data-testid="not-found" className="decoration-pink-500">
         Pagina no encontrada
       </h1>
