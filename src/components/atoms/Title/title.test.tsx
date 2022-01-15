@@ -1,7 +1,10 @@
 import React from 'react'
-import { Default } from './Title.stories'
+import * as stories from './Title.stories'
+import { composeStories } from '@storybook/testing-react'
 import { render } from '@testing-library/react'
 import { StaticQuery } from 'gatsby'
+
+const { Default } = composeStories(stories)
 
 beforeEach(() => {
   StaticQuery.mockImplementationOnce(({ render }) =>

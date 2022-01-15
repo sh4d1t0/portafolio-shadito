@@ -1,0 +1,45 @@
+import React from 'react'
+import * as stories from './Button.stories'
+import { composeStories } from '@storybook/testing-react'
+import { render, screen } from '@testing-library/react'
+
+const { Primary, Secondary, Small, Large, CustomColor } =
+  composeStories(stories)
+
+describe('Button render with props', () => {
+  it('should render primary button', () => {
+    render(<Primary label="Primary Button" />)
+    const ButtonElement = screen.getByRole('button')
+    expect(ButtonElement.textContent).toEqual(Primary.args?.label)
+    expect(ButtonElement).toHaveTextContent(/primary/i)
+    expect(ButtonElement).toHaveClass('btn-primary')
+  })
+  it('should render secondary button', () => {
+    render(<Secondary />)
+    const ButtonElement = screen.getByRole('button')
+    expect(ButtonElement.textContent).toEqual(Secondary.args?.label)
+    expect(ButtonElement).toHaveTextContent(/secondary/i)
+    expect(ButtonElement).toHaveClass('btn-secondary')
+  })
+  it('should render small button', () => {
+    render(<Small />)
+    const ButtonElement = screen.getByRole('button')
+    expect(ButtonElement.textContent).toEqual(Small.args?.label)
+    expect(ButtonElement).toHaveTextContent(/small/i)
+    expect(ButtonElement).toHaveClass('btn-small')
+  })
+  it('should render large button', () => {
+    render(<Large />)
+    const ButtonElement = screen.getByRole('button')
+    expect(ButtonElement.textContent).toEqual(Large.args?.label)
+    expect(ButtonElement).toHaveTextContent(/large/i)
+    expect(ButtonElement).toHaveClass('btn-large')
+  })
+  it('should render a custom color button', () => {
+    render(<CustomColor backgroundColor="blue" />)
+    const ButtonElement = screen.getByRole('button')
+    expect(ButtonElement.textContent).toEqual(CustomColor.args?.label)
+    expect(ButtonElement).toHaveTextContent(/custom/i)
+    expect(ButtonElement).toHaveStyle('background-color: blue')
+  })
+})
