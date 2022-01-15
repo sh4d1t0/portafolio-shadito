@@ -51,12 +51,22 @@ Large.parameters = {
   jest: ['button.test.jsx'],
 }
 
-export const CustomColor = Template.bind({})
-CustomColor.args = {
+export const CustomBackgroundColor = Template.bind({})
+CustomBackgroundColor.args = {
   backgroundColor: 'red',
   label: 'Custom Color',
   variant: 'primary',
 }
-CustomColor.parameters = {
+CustomBackgroundColor.parameters = {
+  jest: ['button.test.jsx'],
+}
+
+export const CustomTextColor = Template.bind({})
+CustomTextColor.args = {
+  color: 'gray',
+  label: 'Custom Color',
+  variant: 'primary',
+}
+CustomTextColor.parameters = {
   jest: ['button.test.jsx'],
 }

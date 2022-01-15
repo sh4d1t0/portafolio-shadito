@@ -3,8 +3,14 @@ import * as stories from './Button.stories'
 import { composeStories } from '@storybook/testing-react'
 import { render, screen } from '@testing-library/react'
 
-const { Primary, Secondary, Small, Large, CustomColor } =
-  composeStories(stories)
+const {
+  Primary,
+  Secondary,
+  Small,
+  Large,
+  CustomBackgroundColor,
+  CustomTextColor,
+} = composeStories(stories)
 
 describe('Button render with props', () => {
   it('should render primary button', () => {
@@ -13,6 +19,11 @@ describe('Button render with props', () => {
     expect(ButtonElement.textContent).toEqual(Primary.args?.label)
     expect(ButtonElement).toHaveTextContent(/primary/i)
     expect(ButtonElement).toHaveClass('btn-primary')
+  })
+  it('should render custom label button', () => {
+    render(<Primary label="Custom Label Button" />)
+    const ButtonElement = screen.getByRole('button')
+    expect(ButtonElement).toHaveTextContent(/custom label/i)
   })
   it('should render secondary button', () => {
     render(<Secondary />)
@@ -35,11 +46,18 @@ describe('Button render with props', () => {
     expect(ButtonElement).toHaveTextContent(/large/i)
     expect(ButtonElement).toHaveClass('btn-large')
   })
-  it('should render a custom color button', () => {
-    render(<CustomColor backgroundColor="blue" />)
+  it('should render a custom background color button', () => {
+    render(<CustomBackgroundColor backgroundColor="blue" />)
     const ButtonElement = screen.getByRole('button')
-    expect(ButtonElement.textContent).toEqual(CustomColor.args?.label)
+    expect(ButtonElement.textContent).toEqual(CustomBackgroundColor.args?.label)
     expect(ButtonElement).toHaveTextContent(/custom/i)
     expect(ButtonElement).toHaveStyle('background-color: blue')
+  })
+  it('should render a custom text color button', () => {
+    render(<CustomTextColor color="white" />)
+    const ButtonElement = screen.getByRole('button')
+    expect(ButtonElement.textContent).toEqual(CustomTextColor.args?.label)
+    expect(ButtonElement).toHaveTextContent(/custom/i)
+    expect(ButtonElement).toHaveStyle('color: white')
   })
 })
