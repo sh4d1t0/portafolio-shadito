@@ -1,3 +1,4 @@
+import { StaticImage } from 'gatsby-plugin-image'
 import React, { FC } from 'react'
 import { Button } from '../../atoms/Button'
 
@@ -6,9 +7,14 @@ const PresentationCard: FC = () => {
     <div className="card">
       <div className="md:flex">
         <div className="pre-card-image">
-          <img
-            src="https://media-exp1.licdn.com/dms/image/C5603AQGf4Xv71Uw-Sg/profile-displayphoto-shrink_400_400/0/1619023258437?e=1646870400&v=beta&t=PbBrahKvaEFUocnrtZ29_dr0ubdeNrZWtBwxLHitpIg"
-            alt="Workflow"
+          <StaticImage
+            src=".https://media-exp1.licdn.com/dms/image/C5603AQGf4Xv71Uw-Sg/profile-displayphoto-shrink_400_400/0/1619023258437?e=1646870400&v=beta&t=PbBrahKvaEFUocnrtZ29_dr0ubdeNrZWtBwxLHitpIg"
+            width={300}
+            quality={95}
+            formats={['auto', 'webp', 'avif']}
+            alt="Shadito Selfie"
+            placeholder="blurred"
+            layout="fixed"
           />
         </div>
         <div className="card-content">
@@ -26,9 +32,14 @@ const PresentationCard: FC = () => {
           </div>
         </div>
         <div className="post-card-image">
-          <img
-            src="https://media-exp1.licdn.com/dms/image/C5603AQGf4Xv71Uw-Sg/profile-displayphoto-shrink_400_400/0/1619023258437?e=1646870400&v=beta&t=PbBrahKvaEFUocnrtZ29_dr0ubdeNrZWtBwxLHitpIg"
-            alt="Workflow"
+          <StaticImage
+            src=".https://media-exp1.licdn.com/dms/image/C5603AQGf4Xv71Uw-Sg/profile-displayphoto-shrink_400_400/0/1619023258437?e=1646870400&v=beta&t=PbBrahKvaEFUocnrtZ29_dr0ubdeNrZWtBwxLHitpIg"
+            width={300}
+            quality={95}
+            formats={['auto', 'webp', 'avif']}
+            alt="Shadito Selfie"
+            placeholder="blurred"
+            layout="fixed"
           />
         </div>
       </div>
