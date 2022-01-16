@@ -15,8 +15,8 @@ module.exports = {
         path: `${__dirname}/src/`,
       },
     },
-    'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
@@ -26,7 +26,7 @@ module.exports = {
         background_color: '#f7f0eb',
         theme_color: '#2563EB',
         display: 'minimal-ui',
-        icon: 'src/images/icon.png',
+        icon: `${__dirname}src/images/icon.png`,
       },
     },
     'gatsby-plugin-postcss',

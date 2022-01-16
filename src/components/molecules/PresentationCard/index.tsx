@@ -8,8 +8,8 @@ const PresentationCard: FC = () => {
       <div className="md:flex">
         <div className="pre-card-image">
           <StaticImage
-            src="../images/shadito-selfie.jpg"
-            width={300}
+            src="../../../images/shadito-selfie.jpg"
+            width={500}
             quality={95}
             formats={['auto', 'webp', 'avif']}
             alt="Shadito Selfie"
@@ -33,7 +33,7 @@ const PresentationCard: FC = () => {
         </div>
         <div className="post-card-image">
           <StaticImage
-            src="../images/shadito-selfie.jpg"
+            src="../../../images/shadito-selfie.jpg"
             width={300}
             quality={95}
             formats={['auto', 'webp', 'avif']}

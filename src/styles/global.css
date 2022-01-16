@@ -34,7 +34,7 @@
     @apply flex-auto md:shrink-0 hidden md:inline-flex;
   }
   .post-card-image img {
-    @apply object-cover md:w-64 lg:w-72 xl:w-96 rounded-full;
+    @apply object-cover md:w-64 lg:w-72 xl:max-w-xl rounded-full;
   }
 
   .card-content {
