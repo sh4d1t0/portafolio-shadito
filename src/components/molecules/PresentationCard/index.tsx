@@ -8,7 +8,7 @@ const PresentationCard: FC = () => {
       <div className="md:flex">
         <div className="pre-card-image">
           <StaticImage
-            src=".https://media-exp1.licdn.com/dms/image/C5603AQGf4Xv71Uw-Sg/profile-displayphoto-shrink_400_400/0/1619023258437?e=1646870400&v=beta&t=PbBrahKvaEFUocnrtZ29_dr0ubdeNrZWtBwxLHitpIg"
+            src="https://media-exp1.licdn.com/dms/image/C5603AQGf4Xv71Uw-Sg/profile-displayphoto-shrink_400_400/0/1619023258437?e=1646870400&v=beta&t=PbBrahKvaEFUocnrtZ29_dr0ubdeNrZWtBwxLHitpIg"
             width={300}
             quality={95}
             formats={['auto', 'webp', 'avif']}
@@ -33,7 +33,7 @@ const PresentationCard: FC = () => {
         </div>
         <div className="post-card-image">
           <StaticImage
-            src=".https://media-exp1.licdn.com/dms/image/C5603AQGf4Xv71Uw-Sg/profile-displayphoto-shrink_400_400/0/1619023258437?e=1646870400&v=beta&t=PbBrahKvaEFUocnrtZ29_dr0ubdeNrZWtBwxLHitpIg"
+            src="https://media-exp1.licdn.com/dms/image/C5603AQGf4Xv71Uw-Sg/profile-displayphoto-shrink_400_400/0/1619023258437?e=1646870400&v=beta&t=PbBrahKvaEFUocnrtZ29_dr0ubdeNrZWtBwxLHitpIg"
             width={300}
             quality={95}
             formats={['auto', 'webp', 'avif']}
