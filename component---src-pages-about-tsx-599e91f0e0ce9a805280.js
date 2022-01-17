@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkportafolio_shadito=self.webpackChunkportafolio_shadito||[]).push([[49],{564:function(e,a,t){t.r(a),t.d(a,{default:function(){return i}});var n=t(7294),r=t(905);function i(){return n.createElement(r.Z,{pageTitle:"Acerca de"},n.createElement("p",{className:"subpixel-antialiased"},"Información personal va a ir aquí"))}}}]);
+//# sourceMappingURL=component---src-pages-about-tsx-599e91f0e0ce9a805280.js.map
