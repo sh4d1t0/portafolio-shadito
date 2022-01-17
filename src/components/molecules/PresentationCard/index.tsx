@@ -9,7 +9,7 @@ const PresentationCard: FC = () => {
         <div className="pre-card-image">
           <StaticImage
             src="../../../images/shadito-selfie.jpg"
-            width={500}
+            width={400}
             quality={95}
             formats={['auto', 'webp', 'avif']}
             alt="Shadito Selfie"
@@ -34,7 +34,7 @@ const PresentationCard: FC = () => {
         <div className="post-card-image">
           <StaticImage
             src="../../../images/shadito-selfie.jpg"
-            width={300}
+            width={400}
             quality={95}
             formats={['auto', 'webp', 'avif']}
             alt="Shadito Selfie"

@@ -8,6 +8,7 @@ interface ButtonProps {
   color?: string
   size?: 'small' | 'large'
   label: string
+  onClick?: () => void
 }
 
 const ButtonClass = styled.button(({ variant, size }: ButtonProps) => [
@@ -34,13 +35,15 @@ export function Button({
   label,
   backgroundColor,
   color,
+  onClick,
 }: ButtonProps) {
   return (
     <ButtonClass
-      variant={variant}
-      size={size}
       className={`btn btn-${variant} btn-${size}`}
       style={{ backgroundColor, color }}
+      variant={variant}
+      size={size}
+      onClick={onClick}
     >
       {label}
     </ButtonClass>
