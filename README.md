@@ -8,4 +8,4 @@ Proyecto personal que despues se convirtio en un proyecto de una organizacion pe
 
 # Referencias:
 
-    - [Developers Funny Proyecto Gatsby](https://github.com/DevelopersFunny/gatsby-typescript-testing)
+   - [Developers Funny Proyecto Gatsby](https://github.com/DevelopersFunny/gatsby-typescript-testing)
